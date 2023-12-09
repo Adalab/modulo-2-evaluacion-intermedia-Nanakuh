@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evaluación intermedia Ana</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <head class="header">
+      <div class="title1">
+        <h1 class="article js__title">Adivina el número</h1>
+      </div>
+    </head>
+    <main class="main">
+      <h3 class="title2">Intoduce aquí tu número</h3>
+      <input class="js__number number" type="number" />
+
+      <input class="js__button form__button" type="submit" value="Prueba" />
+      <div class="form">
+        <label class="form_track" for="nombre"></label>
+        <input
+          class="track js__track"
+          type="text"
+          id="Track"
+          name="Track"
+          placeholder="Pista: Escribe el número y dale a Prueba"
+        />
+      </div>
+      <div class="form">
+        <label class="form_attemps" for="nombre"></label>
+        <input
+          class="attemps js__attemps"
+          type="text"
+          id="Attemps"
+          name="Attemps"
+          placeholder="Numero de intentos: "
+        />
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
