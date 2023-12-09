@@ -13,29 +13,16 @@
       </div>
     </head>
     <main class="main">
-      <h3 class="title2">Intoduce aquí tu número</h3>
-      <input class="js__number number" type="number" />
+        <form action="#">
+      <label class="title2">Intoduce aquí tu número</label>
+      <input class="number js__number" type="number" />
+      <input class="test js_test" type="submit" value="Prueba">
 
-      <input class="js__button form__button" type="submit" value="Prueba" />
-      <div class="form">
-        <label class="form_track" for="nombre"></label>
-        <input
-          class="track js__track"
-          type="text"
-          id="Track"
-          name="Track"
-          placeholder="Pista: Escribe el número y dale a Prueba"
-        />
-      </div>
-      <div class="form">
-        <label class="form_attemps" for="nombre"></label>
-        <input
-          class="attemps js__attemps"
-          type="text"
-          id="Attemps"
-          name="Attemps"
-          placeholder="Numero de intentos: "
-        />
+    </form>
+
+      <p class="clue js_clue">Pista: Escribe el número y dale a Prueba</p>
+
+      <p class="tries">Número de intentos:  <span class="js_tries">0</span></p>
       </div>
     </main>
     <script src="./js/main.js"></script>
