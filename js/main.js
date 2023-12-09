@@ -6,9 +6,18 @@ const track = document.querySelector('.js_track');
 const attempts = document.querySelector('.js_attempts')
 
 
-testButton.addEventListener('click')
-  
-   
+const userNumber =() =>{
+    const numberChosen = number.value;
+}
+
+function handleClickButton(event) {
+    event.preventDefault();
+
+    userNumber();
+
+}
+
+testButton.addEventListener('click',handleClickButton)
 
 
 function getRandomNumber(max) {
