@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <head class="header">
+    <header class="header">
       <div class="title1">
         <h1 class="article js__title">Adivina el número</h1>
       </div>
-    </head>
+    </header>
     <main class="main">
-        <form action="#">
-      <label class="title2">Intoduce aquí tu número</label>
-      <input class="number js__number" type="number" />
-      <input class="test js_test" type="submit" value="Prueba">
+      <form class="form js_form" action="#">
+        <label class="title2">Intoduce aquí tu número</label>
+        <input class="number js_number" type="number" />
+        <label></label>
+        <input class="test js_testButton" type="submit" value="Prueba" />
+      </form>
 
-    </form>
+      <p class="track js_track">Pista: Escribe el número y dale a Prueba</p>
 
-      <p class="clue js_clue">Pista: Escribe el número y dale a Prueba</p>
-
-      <p class="tries">Número de intentos:  <span class="js_tries">0</span></p>
-      </div>
+      <p class="attempts">
+        Número de intentos: <span class="js_attempts">0</span>
+      </p>
     </main>
     <script src="./js/main.js"></script>
   </body>
