@@ -8,7 +8,7 @@ const form = document.querySelector('.js__form');
 
 
 const randomNumber= getRandomNumber(100);
-
+console.log(randomNumber);
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
     }
@@ -16,7 +16,7 @@ function getRandomNumber(max) {
 
 
 function handleClickButton(event) { 
-    console.log("funciona");
+    /*console.log("funciona");*/
 }  
 
 
