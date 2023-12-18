@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evaluación intermedia Ana</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="title1">
-        <h1 class="article js__title">Adivina el número</h1>
-      </div>
-    </header>
-    <main class="main">
-      <form class="form js_form" action="#">
-        <label class="title2">Intoduce aquí tu número</label>
-        <input class="number js_number" type="number" />
-        <label></label>
-        <input class="test js_testButton" type="submit" value="Prueba" />
-      </form>
 
-      <p class="track js_track">Pista: Escribe el número y dale a Prueba</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluación intermedia Ana</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
 
-      <p class="attempts">
-        Número de intentos: <span class="js_attempts">0</span>
-      </p>
-    </main>
-    <script src="./js/main.js"></script>
-  </body>
+<body>
+  <header class="header">
+    <div class="title1">
+      <h1 class="article js__title">Adivina el número</h1>
+    </div>
+  </header>
+  <main class="main">
+    <form class="form js__form" action="#">
+      <label class="title2" for="userNumber">Intoduce aquí tu número:</label>
+      <input class="number js__number" type="number" id="userNumber" placeholder="Ej.11" />    
+      <input class="test js__testButton" type="submit" value="Pruebo" />
+    </form>
+
+    <p class="track js_track">Pista: Escribe el número y dale a Prueba</p>
+
+    <p class="attempts">
+      Número de intentos: <span class="js__attempts">0</span>
+    </p>
+  </main>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
