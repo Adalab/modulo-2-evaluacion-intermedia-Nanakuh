@@ -19,10 +19,12 @@ console.log(randomNumber);
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
+// traer num de la usuaria, 
 function getUserNumber() {
   return parseInt(userNumberInput.value);
 
 }
+// compararlo con el num aleatorio, poner la pista
 function checkNumbers(userNumber, randomNumber) {
   console.log(userNumber, randomNumber);
 
@@ -40,12 +42,12 @@ function checkNumbers(userNumber, randomNumber) {
   }
 
 }
+// actualizar intentos
 function updateAttempts() {
 
 }
 
 
-// traer num de la usuaria, compararlo con el num aleatorio, poner la lista, actualizar intentos
 function handleClickTestBtn(event) {
 
   const userNumber = getUserNumber();
