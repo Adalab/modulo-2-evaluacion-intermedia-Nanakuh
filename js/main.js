@@ -1,26 +1,69 @@
 'use strict'
 
-const number = document.querySelector('.js__number');
-const testButton = document.querySelector('.js__testButton');
+//1. QUERY SELECTOR
+
+const userNumberInput = document.querySelector('.js__userNumberInput');
+const testBtn = document.querySelector('.js__testBtn');
 const track = document.querySelector('.js__track');
 const attempts = document.querySelector('.js__attempts');
 const form = document.querySelector('.js__form');
 
+//2. VARIABLES GLOBALES
 
-const randomNumber= getRandomNumber(100);
+//generar el número aleatorio
+const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
+
+//3. FUNCIONES
+
 function getRandomNumber(max) {
-    return Math.ceil(Math.random() * max);
-    }
+  return Math.ceil(Math.random() * max);
+}
+function getUserNumber() {
+  return parseInt(userNumberInput.value);
+
+}
+function checkNumbers(userNumber, randomNumber) {
+  console.log(userNumber, randomNumber);
+
+  if(userNumber < 1 || userNumber > 100){
+    console.log('El numero debe estar entre 1 y 100');
+  }
+  else if (userNumber === randomNumber) {
+    console.log('Iguales');
+  }
+  else if(userNumber > randomNumber) {
+    console.log('Demasiado alto');
+  }
+  else if (userNumber < randomNumber) {
+    console.log('Demasiado bajo');
+  }
+
+}
+function updateAttempts() {
+
+}
 
 
+// traer num de la usuaria, compararlo con el num aleatorio, poner la lista, actualizar intentos
+function handleClickTestBtn(event) {
 
-function handleClickButton(event) { 
-    /*console.log("funciona");*/
-}  
+  const userNumber = getUserNumber();
+  console.log(userNumber);
 
+  checkNumbers(userNumber, randomNumber);
 
-testButton.addEventListener('click',handleClickButton);
+  updateAttempts();
+
+}
+
+//4. EVENTOS
+
+testBtn.addEventListener('click', handleClickTestBtn);
+
+//5. CODIGO QUE SE EJECUTA CUANDO CARGA LA PÁGINA
+
+console.log(`Mi número aleatorio es ${randomNumber}`)
 
 
 /*const userNumber =() =>{
