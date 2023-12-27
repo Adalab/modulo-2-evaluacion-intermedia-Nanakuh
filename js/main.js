@@ -42,7 +42,7 @@ function checkNumbers(userNumber, randomNumber) {
   }
 
 }
-// actualizar intentos
+/* actualizar intentos
 function updateAttempts() {
 
 }
