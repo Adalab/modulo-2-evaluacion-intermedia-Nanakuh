@@ -29,16 +29,16 @@ function checkNumbers(userNumber, randomNumber) {
   console.log(userNumber, randomNumber);
 
   if(userNumber < 1 || userNumber > 100){
-    console.log('El numero debe estar entre 1 y 100');
+    track.innerHTM ='El numero debe estar entre 1 y 100';
   }
   else if (userNumber === randomNumber) {
-    console.log('Iguales');
+    track.innerHTM = 'Iguales';
   }
   else if(userNumber > randomNumber) {
-    console.log('Demasiado alto');
+    track.innerHTM = 'Demasiado alto';
   }
   else if (userNumber < randomNumber) {
-    console.log('Demasiado bajo');
+    track.innerHTM = 'Demasiado bajo';
   }
 
 }
