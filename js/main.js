@@ -14,49 +14,47 @@ const form = document.querySelector('.js__form');
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 // Contador de intentos
-let attempsCounter = 0;
+let attemptsCounter = 0;
 
-//3. FUNCIONES
+//3. FUNCIONES 
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
+ 
 // traer num de la usuaria, 
 function getUserNumber() {
   return parseInt(userNumberInput.value);
-
 }
 // compararlo con el num aleatorio, poner la pista
 function checkNumbers(userNumber, randomNumber) {
   console.log(userNumber, randomNumber);
 
   if (userNumber < 1 || userNumber > 100) {
-    track.innerHTM = 'El número debe estar entre 1 y 100';
+    console.log('numero erroneo');
+    track.innerHTML = 'El número debe estar entre 1 y 100';
   }
   else if (userNumber === randomNumber) {
-    track.innerHTM = 'Iguales';
+    track.innerHTML = '¡Has ganado, campeona!';
   }
   else if (userNumber > randomNumber) {
-    track.innerHTM = 'Demasiado alto';
+    track.innerHTML = 'Demasiado alto';
   }
   else if (userNumber < randomNumber) {
-    track.innerHTM = 'Demasiado bajo';
+    track.innerHTML = 'Demasiado bajo';
   }
 
 }
 
-// actualizar intentos
-function writeAttemps(){
-  attemptsBox.innerHTML = attempsCounter;
-}
+//actualizar intentos
 
 function updateAttempts() {
-  attempsCounter++;
+  attemptsCounter++;
+  attemptsBox.innerHTML = `${attemptsCounter}`; 
 }
 
-
 function handleClickTestBtn(event) {
-
+  
   const userNumber = getUserNumber();
   console.log(userNumber);
 
@@ -74,14 +72,3 @@ testBtn.addEventListener('click', handleClickTestBtn);
 
 console.log(`Mi número aleatorio es ${randomNumber}`)
 
-
-/*const userNumber =() =>{
-    const numberChosen = number.value;
-}
-
-function handleClickButton(event) {
-    event.preventDefault();
-
-    userNumber();
-
-}*/
