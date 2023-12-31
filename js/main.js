@@ -5,7 +5,7 @@
 const userNumberInput = document.querySelector('.js__userNumberInput');
 const testBtn = document.querySelector('.js__testBtn');
 const track = document.querySelector('.js__track');
-const attempts = document.querySelector('.js__attempts');
+const attemptsBox = document.querySelector('.js__attempts');
 const form = document.querySelector('.js__form');
 
 //2. VARIABLES GLOBALES
@@ -13,6 +13,8 @@ const form = document.querySelector('.js__form');
 //generar el número aleatorio
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
+// Contador de intentos
+let attempsCounter = 0;
 
 //3. FUNCIONES
 
@@ -28,13 +30,13 @@ function getUserNumber() {
 function checkNumbers(userNumber, randomNumber) {
   console.log(userNumber, randomNumber);
 
-  if(userNumber < 1 || userNumber > 100){
-    track.innerHTM ='El numero debe estar entre 1 y 100';
+  if (userNumber < 1 || userNumber > 100) {
+    track.innerHTM = 'El número debe estar entre 1 y 100';
   }
   else if (userNumber === randomNumber) {
     track.innerHTM = 'Iguales';
   }
-  else if(userNumber > randomNumber) {
+  else if (userNumber > randomNumber) {
     track.innerHTM = 'Demasiado alto';
   }
   else if (userNumber < randomNumber) {
@@ -42,9 +44,14 @@ function checkNumbers(userNumber, randomNumber) {
   }
 
 }
-/* actualizar intentos
-function updateAttempts() {
 
+// actualizar intentos
+function writeAttemps(){
+  attemptsBox.innerHTML = attempsCounter;
+}
+
+function updateAttempts() {
+  attempsCounter++;
 }
 
 
