@@ -66,6 +66,10 @@ function handleClickTestBtn(event) {
 
 //4. EVENTOS
 
+form.addEventListener('click', (event)=>{
+  event.preventDefault();
+})
+
 testBtn.addEventListener('click', handleClickTestBtn);
 
 //5. CODIGO QUE SE EJECUTA CUANDO CARGA LA PÁGINA
